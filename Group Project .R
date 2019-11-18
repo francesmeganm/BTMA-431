@@ -6,7 +6,7 @@ webpage <- read_html(https://www.samhsa.gov/data/sites/default/files/cbhsq-repor
 tbls <- html_nodes(webpage, "table")
 head(tbls)
 tbls_ls <- webpage %>%
-  html_nodes("table")
+  html_nodes("table")%>%
   .[13] %>%
   html_table(fill = TRUE)
 str(tbls_ls)
