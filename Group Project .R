@@ -12,4 +12,5 @@ tbls_ls <- webpage %>%
 str(tbls_ls)
 
 table.10.7a <- as.data.frame(tbls_ls)
-
+row.names(table.10.7a) <- table.10.7a[[1]]
+table.10.7a[[1]] <- NULL
