@@ -19,10 +19,10 @@ table.10.7a[[1]] <- NULL
 
 table.10.7a <- table.10.7a[-c(19), ]
 
-whitout.a.pattern <- "[[:digit:]]*[,]*[[:digit:]]*" 
+whithout.a.pattern <- "[[:digit:]]*[,]*[[:digit:]]*" 
 
 for (col in 1:ncol(table.10.7a)){
-  without.a <- str_extract(table.10.7a[[col]], pattern = whitout.a.pattern)
+  without.a <- str_extract(table.10.7a[[col]], pattern = whithout.a.pattern)
   table.10.7a[[col]] <- without.a
 }
 
